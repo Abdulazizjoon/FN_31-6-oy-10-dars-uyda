@@ -10,8 +10,8 @@ function ScrollPagination() {
       let response = await axios.get(
         `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=10`
       );
-      setData((prevData) => [...prevData, ...response.data]);
-      setPage((prevPage) => prevPage + 1);
+      setData((e) => [...e, ...response.data]);
+      setPage((e) => e + 1);
     } catch (error) {
       console.error(error);
     }
